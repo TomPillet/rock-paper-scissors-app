@@ -1,0 +1,3 @@
+[submodule "rock-paper-scissors"]
+	path = rock-paper-scissors-app
+	url = https://github.com/TomPillet/rock-paper-scissors-app
