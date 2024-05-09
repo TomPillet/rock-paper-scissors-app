@@ -5,31 +5,37 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <header className='game-header'>
+      <div className="game-title">ROCK<br/>PAPER<br/>SCISSORS</div>
+      <div className="game-score">SCORE <span id="score">12</span></div>
+    </header>
+    
+    <div className='container'>
+      
+      <div className="round rock">
+        <p>rock</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="round paper">
+        <p>paper</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <div className="round scissors">
+        <p>scissors</p>
+      </div>
+      <div className="round lizard">
+        <p>lizard</p>
+      </div>
+      <div className="round spock">
+        <p>spock</p>
+      </div>
+     */}
+    </div>
+    
     </>
-  )
-}
-
-export default App
+    )
+  }
+  
+  export default App
+  
