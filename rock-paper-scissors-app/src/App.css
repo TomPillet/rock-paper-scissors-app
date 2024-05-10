@@ -6,12 +6,12 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Barlow Bold';
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--gray-text);
   background-color: #242424;
 
   font-synthesis: none;
@@ -28,33 +28,51 @@ a {
 a:hover {
   color: #535bf2;
 }
-
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
   background-image: var(--background-gradient);
+}
+button {
+  border: var(--header-border) 3px solid;
+  border-radius: 8px;
+  min-width: 120px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  font-family: 'Barlow Bold';
+  cursor: pointer;
+}
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 .game-header {
   display: flex;
   justify-content: space-between;
-  font-family: 'Barlow Bold';
   border: var(--header-border) 4px solid;
   border-radius: 20px;
   height: 100px;
   width: 600px;
-  margin-top: 6vh;
+  margin: 6vh 0;
   padding: 16px 20px;
 }
 .game-title {
+  width: 420px;
   color: white;
   font-size: 2.4em;
   line-height: .8em;
   padding: 4px 8px;
+  word-spacing: 420px;
 }
 .game-score {
   height: 100%;
@@ -66,14 +84,27 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: .9em;
+  letter-spacing: .2em;
 }
 #score {
   display: inline-block;
-  line-height: .8em;
-  font-size: 3em;
+  line-height: .9em;
+  font-size: 3.6em;
+  letter-spacing: 0;
   color: var(--gray-text);
   overflow: hidden;
   max-width: 88px;
+}
+.game-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 32px;
 }
 
 .round {
@@ -122,13 +153,8 @@ body {
   box-shadow: 0px 8px var(--spock-shadow-color);
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -140,4 +166,4 @@ body {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
